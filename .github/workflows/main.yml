@@ -27,6 +27,6 @@ jobs:
       - name: Build and Push Docker Image
         uses: docker/build-push-action@v2
         with:
-          context: .
           push: true
-          tags: ${{ env.DOCKER_USERNAME }}/${{ env.DOCKER_IMAGE_NAME }}:${{ github.sha }}
+          file: ./dockerfile
+          tags: melmox/lab4_5:latest
